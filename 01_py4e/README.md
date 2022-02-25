@@ -28,3 +28,15 @@ z = re.search(' b+', str)
 print(y) # prints => <re.Match object; span=(3, 4), match=' '>
 print(z) # prints => <re.Match object; span=(7, 9), match=' b'>
 ```
+
+## Error
+You probably named your file socket.py, if you did so, change it and try again.
+```
+>>> import socket
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\AJP\Desktop\ossu\01_py4e\socket.py", line 19, in <module>
+    mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+AttributeError: partially initialized module 'socket' has no attribute 'AF_INET' (most likely due to a circular import)
+>>>
+```
