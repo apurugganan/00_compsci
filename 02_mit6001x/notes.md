@@ -84,3 +84,10 @@ making guess using small increments
 Bisection Search
 pick in the middle, too big or too small, throw away half, repeat
 ordering property, value increases monotolicly,
+
+# Chapter 4
+Decomposition
+able to break problems into different, self-contained, pieces
+
+Abstraction
+supreess details of method to compute something rom use of that computation
