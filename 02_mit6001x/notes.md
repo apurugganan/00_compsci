@@ -91,3 +91,22 @@ able to break problems into different, self-contained, pieces
 
 Abstraction
 supreess details of method to compute something rom use of that computation
+
+Function
+reusable code; embodies Decompistion and Abstraction
+Properties of a function
+1. name
+2. parameters
+3. docstring
+4. body
+a new scope/frame/environment created when entering a function
+
+```
+any time i do an invocation of a function, i create a new frame, bind the formal parameter of the function to he values of the expressions past in and relative to that frame, i know evaluate the body of that expression, when Im done with the body of the expression, if there’s a return, I’m gonna send back the value of whoever called for it and erase and remove the frame cause I no longer need it
+```
+
+Scope 
+mapping of names to objects
+can access variable defined outside but cannot modify variables defined outside
+
+help: pythontutor.com
