@@ -86,13 +86,13 @@ pick in the middle, too big or too small, throw away half, repeat
 ordering property, value increases monotolicly,
 
 # Chapter 4
-Decomposition
+### Decomposition
 able to break problems into different, self-contained, pieces
 
-Abstraction
+### Abstraction
 supreess details of method to compute something rom use of that computation
 
-Function
+### Function
 reusable code; embodies Decompistion and Abstraction
 Properties of a function
 1. name
@@ -105,8 +105,29 @@ a new scope/frame/environment created when entering a function
 any time i do an invocation of a function, i create a new frame, bind the formal parameter of the function to he values of the expressions past in and relative to that frame, i know evaluate the body of that expression, when Im done with the body of the expression, if there’s a return, I’m gonna send back the value of whoever called for it and erase and remove the frame cause I no longer need it
 ```
 
-Scope 
+### Scope 
 mapping of names to objects
 can access variable defined outside but cannot modify variables defined outside
 
 help: pythontutor.com
+
+## Arguments
+order matter unless if explicitly provided otherwise
+able to provide a default value
+
+## Specification
+a contract between the implementer of a function and the user
+- Assumptions; conditions must be met; typically constraints on values of paramater
+- Guarantees: conditions the must be met by function, provided it has been called in manner consistent with assumptions  
+
+## Docstring
+```
+def isEven(i): 
+    """
+    Input: i, a positive int
+    Returns True if i is eve, otherwise False
+    """
+    return i % 2 == 0
+```
+
+## Recursion
