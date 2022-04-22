@@ -154,3 +154,16 @@ create bindings within current scope for all objects defined in file
 statements within module are executed only the first time a module is imported
 ```
 
+## Files
+every os has its own way of handling files; Python provides an os independent means to access files, using a file handle
+```
+# creates a file named filename 
+# returns a file handle which we can name and reference.
+# argument 'w' that file can be write into
+nameHandle = open('filename', 'w')
+```
+write to a file 
+```
+nameHandle.write('sometext' + '\') # '\' is a carriage return 
+nameHandle.close()
+```
