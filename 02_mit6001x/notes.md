@@ -134,4 +134,23 @@ def isEven(i):
 programming technique where a function calls itself
 must have 1 or more base case;
 must solve the same problem on some oher input with goal of simplifying the larger problem input
+divide and conquer algorithm
+
+
+## Modules
+importing code files to another
+example:
+```
+import file
+file.do_function()
+```
+
+Another way to import 
+```
+from file import *
+do_function()
+
+create bindings within current scope for all objects defined in file
+statements within module are executed only the first time a module is imported
+```
 
