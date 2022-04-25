@@ -167,3 +167,44 @@ write to a file
 nameHandle.write('sometext' + '\') # '\' is a carriage return 
 nameHandle.close()
 ```
+
+# Chapter 5
+## Tuples
+ordered sequence of elements,
+can be mixed
+immutable, cannot change the element values
+```
+tuple = ()
+tuple = (1, "2", 3)
+
+tuple + (4,5)
+print(tuple) # (1,"2",3,4,5)
+tuple[0] # prints 1
+```
+comma in the tuple
+```
+t = (1,2,3)
+t[1:2] # => (2,)
+# comma in the tuple is identifier that it is infact a tuple
+```
+
+convenient way to switch values
+```
+(x,y) = (y,x)
+```
+
+return more than 1 value
+```
+def quotient_and_remainder(x,y):
+    q = x // y
+    r = x % y
+
+    return (q,r)
+
+(quot, rem) = quotient_and_remainder(4,5)
+```
+
+
+
+
+```
