@@ -204,7 +204,20 @@ def quotient_and_remainder(x,y):
 (quot, rem) = quotient_and_remainder(4,5)
 ```
 
+tuples are iterable
+```
+def get_data(a_tuple):
+    nums = ()
+    words = ()
 
-
-
+    for t in a_tuple:
+        nums = nums + (t[0],)
+        if t[1] not in words:
+            words = words + (t[1],)
+    
+    min_nums = min(nums)
+    max_nums = max(nums)
+    unique_words = len(words)
+    
+    return (min_nums, max_nums, unique_words)
 ```
