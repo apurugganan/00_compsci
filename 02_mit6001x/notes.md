@@ -257,12 +257,59 @@ a_list = [a,b,c]
 ''.join(a_list) # => 'abc'
 '_'.join(a_list) # => 'a_b_c'
 
+# SORT a list
+lst = [2,3,1]
+lst.sort() # => [1,2,3]
+lst.reverse() # => [3,2,1]
+
+lst = [2,3,1]
+sorted(lst) # => [1,2,3] creates a duplicate
 
 
+# CONCATENATE
+l1 = [1,2,3]
+l2 = [4,5,6]
+l3 = l1 + l2 # => [1,2,3,4,5,6]
+```
+
+## RANGE
+acts as a tuple
+for el in range(1,2,3)
+
+
+## ALIASING
+List is an object in memory
+```
+hot = ['yellow','orange', 'red']
+warm = hot
+
+hot.append('pink') # will also change warm (points to the same object)
+```
+
+## CLONING
+```
+cool = ['blue, 'green', 'grey']
+chill = cool[:]
+```
+
+## MUTATION 
+avoid mutating a list as you are iterating over it
+```
+# unexpected outcome
+def remove_duplicate(l1,l2):
+    for el in l1:
+        if eel in l2:
+            l1.remove(el)
+
+# correct way
+def remove_duplicate(l1,l2):
+    l1_copy = l1[:]
+    for el in l1_copy:
+        if eel in l2:
+            l1.remove(el)
 
 ```
 
 
-
-
+# OBJECT
 Almost everything in python is an object; object have data, methods and functions
