@@ -313,3 +313,42 @@ def remove_duplicate(l1,l2):
 
 # OBJECT
 Almost everything in python is an object; object have data, methods and functions
+
+# FUNCTION AS OBJECTS
+first class objects: type, can be elements of data structures can appear in expressions
+
+passing function as arguments; high order programming
+```
+def apply_to_each(alist, afunc):
+    for i in range(len(alist)):
+        alist[i] = afunc(alist[i])
+
+l = [1, -2, 3.4]
+
+apply_to_each(l, abs) # => [1,2,3.4]
+apply_to_each(l, int) # => [1,2,3]
+
+def apply_funcs(alist_of_functions, x):
+    for f in alist_of_functions:
+        print(f(x))
+
+apply_func([abs, int], 2)
+# => 2
+# => 2
+```
+
+## MAP
+```
+map(abs,[1, -2, 3, -4])
+for el in map(abs, [1,-2,3,-4])
+    print(el)
+
+# general form - an n-ary function and n collections of arguments
+l1 = [1,28,36]
+l2 = [4,57,9]
+
+for el in map(min,l1,l2):
+    print(el)
+
+[1,28,9]
+```
