@@ -352,3 +352,21 @@ for el in map(min,l1,l2):
 
 [1,28,9]
 ```
+
+## COMMON OPERATIONS: Strings, Tuples, Lists, Range
+```
+seq[i] # => get element of sequence
+len(seq) # => length of sequence
+seq1 + seq2 # => concatenation of sequence (not range) 
+n * seq # => sequence that repeats seq n times (not range)
+seq[start : end] # => slice of sequence
+e in seq # => True if e is contained in seq
+e in not in seq # seq => Tire if e is not in seq
+for e in seq # => iterares over elememts of sequence
+
+```
+
+
+
+
+# CHAPTER 6
