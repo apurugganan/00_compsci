@@ -363,10 +363,25 @@ seq[start : end] # => slice of sequence
 e in seq # => True if e is contained in seq
 e in not in seq # seq => Tire if e is not in seq
 for e in seq # => iterares over elememts of sequence
-
 ```
 
-
-
-
 # CHAPTER 6
+## DICTIONARIES
+stores pairs of data: key and value; no order
+mutable
+
+keys must be unique; immutable; hashable; be wary of using float as key
+values any type; can be a duplicate
+
+```
+my_obj = {key:value}
+
+my_obj['key'] # => returns value
+
+# Some Operations
+'key' in my_obj
+del(my_obj['key'])
+
+my_obj.keys()
+my_obj.values()
+```
