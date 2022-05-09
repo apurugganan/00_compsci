@@ -385,3 +385,18 @@ del(my_obj['key'])
 my_obj.keys()
 my_obj.values()
 ```
+
+### Example
+
+word counter
+```  
+def lyrics_to_frequencies(lyrics):
+    myDict = {}
+    for word in lyrics:
+        if word in myDict: 
+            myDict[word] += 1
+        else: 
+            myDict[word] = 1
+    return myDict
+```
+
