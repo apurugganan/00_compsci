@@ -388,8 +388,13 @@ my_obj.values()
 
 ### Example
 
-word counter
+## word counter
 ```  
+lyrics = ['hello', 'world', 
+    'beep', 'beep', 
+    'foo', 'foo', 
+    'python', 'python', 'python']
+
 def lyrics_to_frequencies(lyrics):
     myDict = {}
     for word in lyrics:
@@ -398,5 +403,62 @@ def lyrics_to_frequencies(lyrics):
         else: 
             myDict[word] = 1
     return myDict
+
+print('dict:', lyrics_to_frequencies(lyrics))
+
+
+def most_common_words(freq): 
+    values = freq.values()
+    best = max(values)
+    words = []
+    for k in freq:
+        if freq[k] == best:
+            words.append(k)
+    return (words, best) # return a tuple
+
+
+common_words = lyrics_to_frequencies(lyrics)
+print(common_words)
+print('most:', most_common_words(common_words))
+
+
+def words_often(freqs, minTimes):
+    result = []
+    done = False
+    while not done:
+        temp = most_common_words(freqs)
+        if temp[1] >= minTimes:
+            result.append(temp)
+            for w in temp[0]:
+                del(freqs[w])
+        else:
+            done = True
+    return result
+
+print(words_often(common_words, 2))
 ```
 
+## Efficient Fibonacci
+Inefficient fib
+```
+def fibonacci(num):
+    if n == 1:
+        return 1
+    elif n == 2: 
+        return 2
+    else:
+        return fibonacci(n-1) + fibonacci(n-2) 
+```
+
+Efficient fibonacci - memo-ization
+keeping track of value already computed
+```
+def fib_efficient(n, d):
+    if n in d:
+        return d[n]
+    else:
+        answer = fib_efficient(n-1, d) + fib_efficient(n-2,d)
+        d[n] = answer
+        return answer
+
+```
