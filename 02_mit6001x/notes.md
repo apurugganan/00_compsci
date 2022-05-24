@@ -462,3 +462,14 @@ def fib_efficient(n, d):
         return answer
 
 ```
+
+## Global Variables
+- can be dangerous; 
+- breakes scoping of variables by function call
+```
+# global keyword allows to change global variable
+myvar = 1
+def myfunc():
+    global myvar
+    myvar = 2
+```
