@@ -473,3 +473,53 @@ def myfunc():
     global myvar
     myvar = 2
 ```
+
+# Chapter 7
+## Testing 
+Testing 
+Defensive Programming
+Eliminate Source of Bugs - Debugging
+
+Defensive Programming 
+- write specifications (doc string)
+- Modularize programs (break it up)
+- check conditions on inputs/outputs (assertions)
+
+Testing Validations
+- compare inputs & outputs
+- how to break the program
+
+Debugging 
+- study events leading up to an error
+- why is not working
+- how to fix the program
+
+Set up
+- design code to ease testing
+- break it up to modules
+- document constraints (what is input output)
+- document assumptions
+
+When are you ready to test
+- ensure code runs (no syntax errors, no static semantic errors --things that dont form a well formed/written expression)
+
+-set of expected results (input output)
+
+Unit Testing 
+- validate each piece of program
+- test each function separately
+
+Backend Retest
+Regression Testing
+- add test for bugs as you find them in a function
+- catch reintroduced errors that previously were fixed 
+
+Integration Testing 
+- test the overall / emtire program
+
+HOW
+Test approaches
+- intuition - natural partition
+- if no natural partition, random testing
+- black box testing; explore paths through specification
+- glass box testing ; explore paths through code
