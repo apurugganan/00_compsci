@@ -519,7 +519,16 @@ Integration Testing
 
 HOW
 Test approaches
-- intuition - natural partition
-- if no natural partition, random testing
-- black box testing; explore paths through specification
-- glass box testing ; explore paths through code
+1. intuition - natural partition
+2. if no natural partition, random testing
+3. black box testing; explore paths through specification
+4. glass box testing ; explore paths through code
+
+Black Box Testing
+- designed without looking the code
+- can be reused
+- build test cases in natural space partition
+
+Glass Box Testing
+- refers to the code directly for test design
+- each branch; path-complete
