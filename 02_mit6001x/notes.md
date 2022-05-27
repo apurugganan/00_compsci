@@ -532,3 +532,27 @@ Black Box Testing
 Glass Box Testing
 - refers to the code directly for test design
 - each branch; path-complete
+
+## BUGS
+- isolate 
+- eradicate
+- retest 
+
+Overt vs covert
+overt - obvious manifestation - code crashes / infinite loop
+covert - no obvious / not behaving as expected
+
+Persistent vs intermittent
+- persistent everytime
+- intermittent - occurs sometimes even if run on same input
+
+Overt and Persistent
+- obvious to detect
+
+Overt and intermittent
+- harder to debug; 
+- conditions to reproduce;l can be handled
+
+Covert
+- dangerous; 
+- not realize answers are incorrect until run for long period
