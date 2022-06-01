@@ -556,3 +556,81 @@ Overt and intermittent
 Covert
 - dangerous; 
 - not realize answers are incorrect until run for long period
+
+## Debugging
+print statements; what Im expecting, what I am seeing
+systematic; test hypothesis
+bisection method
+
+think, draw, explain
+backup code, change code
+
+
+# Chapter 8 Exceptions and Assertions
+
+## Exceptions
+- procedure of execution hits an unexpected result/condition
+ex. 
+```
+// IndexError: access an index beyond the limits
+test = [1,2,3]
+test[4]
+
+// TypeError: trying to conver an inappropriate type
+int(test) 
+
+NameError: referencing a non-existing variable
+a
+```
+SyntaxError     : Python cant parse program
+NameError       : variable name not found
+AttributeError  : attribute reference fails
+TypeError       : operand doesnt have correct type
+ValueError      : operand typoe okay but value is illegal
+IOError         : IO system reports malfunction (file doesnt exist)
+
+What to do
+fail silently - bad idea; no warning; substitute value or continue
+return an "error" value - complicates code; check special value; what value?
+stop execution - raises an exception
+
+### TRY-EXCEPT
+```
+try:
+    Do something
+except:
+    Do something when try does not complete; exception is raised
+
+# USING SPECIFIC ERRORS
+try: 
+    a = int(input("Number 1: "))
+    b = int(input("Number 2: "))
+    print(a/b)
+    print(a+b)
+except ValueError:
+    print("Could not convert number")
+except ZeroDivisionError:
+    print("Cant divide by zero")
+except: 
+    print("Something went wrong")
+
+# ELSE AND FINALLY
+try: 
+    a = int(input("Number 1: "))
+    b = int(input("Number 2: "))
+    print(a/b)
+    print(a+b)
+except ValueError:
+    print("Could not convert number")
+except ZeroDivisionError:
+    print("Cant divide by zero")
+except: 
+    print("Something went wrong")
+else: 
+    # runs when try completes with no exceptions
+finally:
+    # always executed after try, else and except
+    # even with a break, continue or return
+    # will run no matter what else happened
+```
+
