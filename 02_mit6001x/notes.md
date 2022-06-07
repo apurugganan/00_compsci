@@ -683,6 +683,27 @@ my_list = [
     "john",[50,50,50],
     "charlie",[]
 ]
+```
 
+## Assertions
+- raise and error if assumptions are not met
+- dont allow programmer to control response to unexpected conditions
+- ensure execution halts whenever expected condition is not met
+- check inputs;can be used anywhere
+- easier to locate a source of a bug
+- both input and output
 
 ```
+def avg(grades):
+    assert not len (grades) == 0, 'no grades data'
+    return sum(grades) / let(grades)
+```
+
+Where to use assertions
+- supplement to testing
+- raise exceptions to bad data input
+- use assertions to 
+    1. check types of values
+    2. check invariants on data structs are met 
+    3. check constraints on return values
+    4. check violations of constraints on procedure (e.g no duplicates on a list)
