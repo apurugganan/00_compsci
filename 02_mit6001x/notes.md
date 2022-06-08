@@ -707,3 +707,32 @@ Where to use assertions
     2. check invariants on data structs are met 
     3. check constraints on return values
     4. check violations of constraints on procedure (e.g no duplicates on a list)
+
+
+## Objected Oriented Programming 
+- data abstraction; 
+- internal representation thru data attributes
+- interface for interactong with an object is through methods
+- defines behaviours but hides implementation
+- can create new instance; destroy objects
+- bundle data into packages; procedures work on them through well-defined interfaces
+
+objects have: 
+1. type 
+2. data representation 
+3. set of procedures for interaction with the object
+
+each instance is a particular type of an object
+123 is an instance of an int
+a = "hello"; a is an instand of a string
+
+NOTE: always use the defined interfaces; correct behavior may be compromised if you manipulate internal data representation
+
+creating a class vs using instance of a class
+creating
+1. define the class name
+2. define class attributes
+
+using 
+1. create new instances of objects
+2. doing operations on the instance
