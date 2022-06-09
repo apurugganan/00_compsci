@@ -736,3 +736,26 @@ creating
 using 
 1. create new instances of objects
 2. doing operations on the instance
+
+## Class
+```
+class Name_of_Class(object):
+    <define attributes>
+
+# object means that the Name class is a python object and inherits all its attributes
+# Name is a subclass of arg
+# object is a superclass of Name
+```
+
+Attributes
+- data and procedures that "belong" to the class; 
+- data attributes as other objects that make up the class
+- procedural attributes(methods) as functions that work only with this class; ways to use data 
+
+Define how to create an instance of a class
+```
+class Coordinate(object)
+    def __init__(self, x,y):
+        self.x = x
+        self.y = y
+```
