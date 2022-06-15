@@ -799,7 +799,21 @@ print(Coordinate.distance(c, origin))
 
 # using class to get to method  must provide both arguments
 # get the value of Coordinate (a frame), looks up the value associated with distance(a procedure), then invokes it; requires two arguments
+```
 
+## String Representation | String Method
+print representation of the instance; class object
+```
+print(c) # gives memory location; uninformative
+         # within the main environment, this is the instance of the coordinate object and this is the memory location where it lies
 
+class Coordinate(object):
+    def __init__(self, x, y):
+        self.x = x 
+        self.y = y
+    
+    def __str__(self):
+        return "whatever you like" # needs to be a string
 
+print(c)
 ```
