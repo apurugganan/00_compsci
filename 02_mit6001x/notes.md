@@ -817,3 +817,21 @@ class Coordinate(object):
 
 print(c)
 ```
+
+## Type 
+```
+type(c)
+
+# instance of a class and the class type is Coordinate
+# __main__; defined up the enivornment of where I interact
+```
+
+## Special Operators
+override built in special operators: +, -, =, < etc..
+```
+__add__
+__sub__
+__eq__ 
+__lt__
+__ln__
+```
