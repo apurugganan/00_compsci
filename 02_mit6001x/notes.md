@@ -747,7 +747,7 @@ class Name_of_Class(object):
 # object is a superclass of Name
 ```
 
-Attributes
+## Attributes
 - data and procedures that "belong" to the class; 
 - data attributes as other objects that make up the class
 - procedural attributes(methods) as functions that work only with this class; ways to use data 
@@ -758,4 +758,48 @@ class Coordinate(object)
     def __init__(self, x,y):
         self.x = x
         self.y = y
+```
+
+instance.data
+instance.method
+c.x
+- instance as a frame that we bound values to data
+- c gets the value of c (a frame) and then look up the value associated with x
+- "." used to access any attribute of the object
+
+## Method
+procedural attribute; function that only works with the class
+SIDENOTE: python always passes the actual object as the first arugment; convention is to use self as the name of the argument
+```
+class Coordinate(object):
+    def __init__(self, x, y):
+        self.x = x 
+        self.y = y
+    
+    # self returns to an instance
+    def distance(self, other): 
+        x_diff_sq = (self.x - other.x) ** 2
+        y_diff_sq = (self.y - other.y) ** 2
+        return (x_diff_sq + y_diff_sq) ** 0.5
+
+```
+
+Calling methods
+```
+# conventional 
+c = Coordinate(3,4)
+origin = Coordinate(0,0)
+
+print(c.distance(origin))
+# object on which to call method
+# inherits the distance from the class definition, automatically uses c as the first argument
+
+# name of a class; 
+print(Coordinate.distance(c, origin))
+
+# using class to get to method  must provide both arguments
+# get the value of Coordinate (a frame), looks up the value associated with distance(a procedure), then invokes it; requires two arguments
+
+
+
 ```
