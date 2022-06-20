@@ -836,7 +836,7 @@ __lt__
 __ln__
 ```
 
-## Example
+## Example: class fractions
 ```
 class Fraction(object):
     def __init__(self, num, den):
@@ -848,6 +848,7 @@ class Fraction(object):
     # methods
     # getters and setters; preserve internal representation
     # separate internal and actual use representation
+    # not directly manipulate the internal representation
     def getNum(self):
         return self.num
     def getDen(self):
@@ -860,4 +861,34 @@ class Fraction(object):
         newDen = self.num() * other.num
 
         return fraction(newNum, newDen)
+```
+
+## Example: set of integers
+representational invariant; a particular integer only appears once in a set
+```
+class InSet(object):
+    def __init__(self):
+        self.vals = []
+    
+    def __str__(self):
+        self.vals.sort()
+        result = ''
+        for e in self.vals:
+            result = result + str(el) + ","
+            return "{" + result[:-1] + "}"
+    # methods
+    def insert(self, el):
+        if not el in self.vals:
+            self.vals.append(el)
+
+    def isMember(self, el):
+        return el in self.vals
+
+    def.remove(self, el):
+        try: 
+            self.vals.remove(el)
+        except:
+            raise ValueError(str(el) + " not found")
+
+    
 ```
