@@ -892,3 +892,41 @@ class InSet(object):
 
     
 ```
+
+## Why OOP?
+- Bundle together objects that share the same properties
+- common attributes
+- procedures that opperate on attributes
+- abstraction between how to implement (define a class, data attributes. methods) vs how to use (create instances, do operations)
+
+Accesseing data attributes
+- separate internal representation vs access to the representation
+-  information hiding
+- easy to maintain; prevent bugs
+```
+a.age
+a.get_age()
+```
+
+// erros can occur if class definition changes
+```
+class Animal(object):
+    def __init__(self, age):
+        self.years = age
+    def get_age(self):
+        return self.years
+```
+
+Python not great at information hiding
+- allows access data outside class definition
+```
+print(a.age)
+```
+- allows write data outside class
+```
+a.age = 'infiniite'
+```
+- allows creation of data attributes for an instance outside class definition
+```
+a.siz = "tiny"
+```
