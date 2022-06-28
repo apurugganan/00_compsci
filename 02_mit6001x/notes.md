@@ -968,3 +968,40 @@ class Student(Person):
         Person._init(self, name, age)
         self.major = major
 ```
+
+## Class Variables
+- inside a class; outside of a method
+- shared among all instances of the same class
+
+```
+class Rabbit(Animal):
+    tag = 1
+    def __init__(self, age, parent1=None, parent2=None):
+        Animal._init_(self, age)
+        self.parent1 = parent1
+        self.parent2 = parent2
+        self.rid = Rabbit.tag
+        Rabbit.tag += 1
+    
+
+    def get_rid(self):
+        return str(self.rid).zfill(3)
+    def get_parent1(self):
+        return self.parent1
+    def get_parent2(self):
+        return self.parent2
+```
+
+Working wuth own types
+```
+def __add__(self, other):
+    return Rabbit(0, self, other)
+
+def __eq__(self, other):
+    parents_same = self.parent1.rid == other.parent1.rid and self.parent2.rid == other.parent2.rid
+
+    parent_opposite = self.parent2.rid == other.parent1.rid and self.parent1.rid == other.parent2.rid
+
+    return parents_same or parents_opposite
+
+```

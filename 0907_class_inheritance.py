@@ -31,3 +31,4 @@ class Student(Person):
     def __init__ (self, name, age, major = None):
         Person._init(self, name, age)
         self.major = major
+
