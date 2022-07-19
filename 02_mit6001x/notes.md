@@ -992,7 +992,7 @@ class Rabbit(Animal):
         return self.parent2
 ```
 
-Working wuth own types
+Working with own types
 ```
 def __add__(self, other):
     return Rabbit(0, self, other)
