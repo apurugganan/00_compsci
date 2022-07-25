@@ -1,5 +1,4 @@
 class Person(object):
-    nextIdNum = 0
     def __init__(self, name):
         self.name = name
         self.lastName = name.split(' ')[-1]
@@ -16,6 +15,7 @@ class Person(object):
         return self.lastName
 
 class MITPerson(Person):
+    nextIdNum = 0
     def __init__(self, name):
         Person.__init__(self,name)
         self.idNum = MITPerson.nextIdNum
